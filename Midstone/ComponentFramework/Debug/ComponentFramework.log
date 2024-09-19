@@ -1,33 +1,4 @@
-﻿  Body.cpp
-  Debug.cpp
-  Mesh.cpp
-C:\Users\popho\Documents\GitHub\Midstone-Project\Midstone\ComponentFramework\tiny_obj_loader.h(1665,27): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file 'Mesh.cpp')
-  
-  Scene0p.cpp
-C:\GameDev\MathLibrary\include\MMath.h(18,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Scene0p.cpp')
-  
-C:\GameDev\MathLibrary\include\MMath.h(19,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Scene0p.cpp')
-  
-C:\GameDev\MathLibrary\include\MMath.h(49,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Scene0p.cpp')
-  
-  SceneManager.cpp
-  Main.cpp
-  Scene0g.cpp
-C:\GameDev\MathLibrary\include\MMath.h(18,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Scene0g.cpp')
-  
-C:\GameDev\MathLibrary\include\MMath.h(19,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Scene0g.cpp')
-  
-C:\GameDev\MathLibrary\include\MMath.h(49,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Scene0g.cpp')
-  
-  Shader.cpp
-  Timer.cpp
-  Window.cpp
-  Generating Code...
+﻿  PlayerController.cpp
+  This is wrong: Vec4 cross(const Vec4& a, const Vec4& b)
+  This questionable: Vec4 inverse(const Vec4& v)
   ComponentFramework.vcxproj -> C:\Users\popho\Documents\GitHub\Midstone-Project\Midstone\Debug\ComponentFramework.exe

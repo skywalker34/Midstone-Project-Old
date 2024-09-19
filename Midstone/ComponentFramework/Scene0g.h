@@ -2,6 +2,7 @@
 #define SCENE0_H
 #include "Scene.h"
 #include "Vector.h"
+#include "PlayerController.h"
 #include <Matrix.h>
 using namespace MATH;
 
@@ -19,6 +20,7 @@ private:
 	Matrix4 projectionMatrix;
 	Matrix4 viewMatrix;
 	Matrix4 modelMatrix;
+	PlayerController playerController;
 	bool drawInWireMode;
 
 public:

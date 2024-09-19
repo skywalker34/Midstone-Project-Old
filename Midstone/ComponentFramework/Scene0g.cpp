@@ -22,7 +22,7 @@ bool Scene0g::OnCreate() {
 	sphere = new Body();
 	sphere->OnCreate();
 	
-	mesh = new Mesh("meshes/Sphere.obj");
+	mesh = new Mesh("meshes/Graph.obj");
 	mesh->OnCreate();
 
 	shader = new Shader("shaders/defaultVert.glsl", "shaders/defaultFrag.glsl");
@@ -30,10 +30,14 @@ bool Scene0g::OnCreate() {
 		std::cout << "Shader failed ... we have a problem\n";
 	}
 
+	playerController.OnCreate();
+
 	projectionMatrix = MMath::perspective(45.0f, (16.0f / 9.0f), 0.5f, 100.0f);
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
 	modelMatrix.loadIdentity();
 	return true;
+
+
 }
 
 void Scene0g::OnDestroy() {
@@ -51,16 +55,23 @@ void Scene0g::OnDestroy() {
 }
 
 void Scene0g::HandleEvents(const SDL_Event &sdlEvent) {
+
+
+	playerController.handleEvents(sdlEvent);
+
 	switch( sdlEvent.type ) {
     case SDL_KEYDOWN:
 		switch (sdlEvent.key.keysym.scancode) {
-			case SDL_SCANCODE_W:
+			case SDL_SCANCODE_L:
 				drawInWireMode = !drawInWireMode;
 				break;
 		}
 		break;
 
-	case SDL_MOUSEMOTION:          
+
+	/////////////////////**DO NOT PUT ANY CONTROLS THAT AREN'T RELEVANT TO THE SCENE IN THE SCENE**\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	//use player controller instead for player controls
+	/*case SDL_MOUSEMOTION:          
 		break;
 
 	case SDL_MOUSEBUTTONDOWN:              
@@ -70,7 +81,7 @@ void Scene0g::HandleEvents(const SDL_Event &sdlEvent) {
 	break;
 
 	default:
-		break;
+		break;*/
     }
 }
 
@@ -89,8 +100,8 @@ void Scene0g::Render() const {
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
 	glUseProgram(shader->GetProgram());
-	glUniformMatrix4fv(shader->GetUniformID("projectionMatrix"), 1, GL_FALSE, projectionMatrix);
-	glUniformMatrix4fv(shader->GetUniformID("viewMatrix"), 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(shader->GetUniformID("projectionMatrix"), 1, GL_FALSE,  playerController.camera.GetProjectionMatrix());
+	glUniformMatrix4fv(shader->GetUniformID("viewMatrix"), 1, GL_FALSE, playerController.camera.GetViewMatrix());
 	glUniformMatrix4fv(shader->GetUniformID("modelMatrix"), 1, GL_FALSE, modelMatrix);
 	mesh->Render(GL_TRIANGLES);
 	glUseProgram(0);
