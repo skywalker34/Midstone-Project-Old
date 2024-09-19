@@ -1,9 +1,9 @@
-Sat May  4 18:17:30 2024
+Wed Sep 18 13:53:40 2024
 [INFO]: Starting the SceneManager
-[INFO]: OpenGL version: 4.6.0 NVIDIA 536.23
-[INFO]: Graphics card vendor NVIDIA Corporation
-[INFO]: Graphics card name NVIDIA GeForce GTX 1650/PCIe/SSE2
-[INFO]: GLSL Version 4.60 NVIDIA
+[INFO]: OpenGL version: 4.6.0 - Build 30.0.101.1029
+[INFO]: Graphics card vendor Intel
+[INFO]: Graphics card name Intel(R) Iris(R) Xe Graphics
+[INFO]: GLSL Version 4.60 - Build 30.0.101.1029
 [INFO]: Created Scene0: 
 [INFO]: Loading assets Scene0: 
 [INFO]: Uniforms:
