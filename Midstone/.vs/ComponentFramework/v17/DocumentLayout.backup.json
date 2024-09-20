@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene0p.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Scene0p.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\EnemyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\EnemyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Body.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\FriendlyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\ShipController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\ShipController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Ship.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Ship.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Planet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Planet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +38,97 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Body.cpp",
-              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.cpp",
-              "RelativeDocumentMoniker": "ComponentFramework\\Body.cpp",
-              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.cpp*",
-              "RelativeToolTip": "ComponentFramework\\Body.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-18T17:53:13.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Scene0p.cpp",
-              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene0p.cpp",
-              "RelativeDocumentMoniker": "ComponentFramework\\Scene0p.cpp",
-              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene0p.cpp",
-              "RelativeToolTip": "ComponentFramework\\Scene0p.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-18T17:53:02.615Z",
+              "Title": "EnemyShip.h",
+              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\EnemyShip.h",
+              "RelativeDocumentMoniker": "ComponentFramework\\EnemyShip.h",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\EnemyShip.h*",
+              "RelativeToolTip": "ComponentFramework\\EnemyShip.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T22:22:03.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SceneManager.cpp",
-              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.cpp",
-              "RelativeDocumentMoniker": "ComponentFramework\\SceneManager.cpp",
-              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.cpp",
-              "RelativeToolTip": "ComponentFramework\\SceneManager.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-04T22:16:52.751Z",
+              "Title": "ShipController.h",
+              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\ShipController.h",
+              "RelativeDocumentMoniker": "ComponentFramework\\ShipController.h",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\ShipController.h*",
+              "RelativeToolTip": "ComponentFramework\\ShipController.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T22:19:29.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bullet.h",
+              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Bullet.h",
+              "RelativeDocumentMoniker": "ComponentFramework\\Bullet.h",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Bullet.h*",
+              "RelativeToolTip": "ComponentFramework\\Bullet.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T22:16:39.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FriendlyShip.h",
+              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.h",
+              "RelativeDocumentMoniker": "ComponentFramework\\FriendlyShip.h",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.h*",
+              "RelativeToolTip": "ComponentFramework\\FriendlyShip.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T22:15:08.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Ship.h",
+              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Ship.h",
+              "RelativeDocumentMoniker": "ComponentFramework\\Ship.h",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Ship.h",
+              "RelativeToolTip": "ComponentFramework\\Ship.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T22:13:59.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Planet.h",
+              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Planet.h",
+              "RelativeDocumentMoniker": "ComponentFramework\\Planet.h",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Planet.h",
+              "RelativeToolTip": "ComponentFramework\\Planet.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T22:12:34.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Actor.h",
+              "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Actor.h",
+              "RelativeDocumentMoniker": "ComponentFramework\\Actor.h",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Actor.h",
+              "RelativeToolTip": "ComponentFramework\\Actor.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T22:05:24.099Z",
               "EditorCaption": ""
             }
           ]
