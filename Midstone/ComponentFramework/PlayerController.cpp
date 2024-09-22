@@ -16,7 +16,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 	transform.setOrientation(trackball.getQuat()); //trackball so viewer can "turn their head"
 
 	Vec3 direction = QMath::rotate(-forward, transform.getOrientation()); //gets the direction the camera is facing
-	direction.print("Direction: ");
+	//direction.print("Direction: ");
 	Vec3 v;//temporary
 	switch (sdlEvent.type) {
 	case SDL_KEYDOWN: //code that allows the user to move the camera around

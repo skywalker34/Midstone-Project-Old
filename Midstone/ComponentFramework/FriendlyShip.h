@@ -3,9 +3,21 @@
 #include "Bullet.h"
 #include "ShipController.h"
 #include <vector>
-class FriendlyShip : Ship
+#include <QMath.h>
+#include <VMath.h>
+class FriendlyShip : 
+	public Ship
 {
-	std::vector<Bullet> bullets;
-	ShipController controller;
+	public:
+		std::vector<Bullet> bullets;
+		ShipController controller;
+		Vec3 destination = Vec3(0, 0, 5.0f);
+
+		FriendlyShip() {}
+
+		void moveToDestination(Vec3 destination);
+		bool hasReachDestination();
+
+		~FriendlyShip();
 };
 
