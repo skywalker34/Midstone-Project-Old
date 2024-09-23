@@ -11,8 +11,9 @@ class Texture;
 class Body {
 public:
     Body();
+	Body(Vec3 pos_, Vec3 vel_, Vec3 acc_, float mass_);
     ~Body();
-private: /// Physics stuff
+// private: /// Physics stuff
 	Vec3 pos;
 	Vec3 vel;
 	Vec3 accel;

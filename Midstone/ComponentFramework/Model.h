@@ -5,6 +5,7 @@
 #include "Shader.h"
 class Model
 {
+public:
 	Texture tex;
 	Mesh* mesh;
 	Shader* shader;

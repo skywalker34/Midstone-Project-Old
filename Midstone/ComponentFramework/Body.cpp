@@ -3,6 +3,14 @@
 Body::Body(): pos{}, vel{}, accel{}, mass{0.0f}, mesh{nullptr},texture{nullptr} {
 }
 
+Body::Body(Vec3 pos_, Vec3 vel_, Vec3 accel_, float mass_)
+{
+	pos = pos_;
+	vel = vel_;
+	accel = accel_;
+	mass = mass_;
+}
+
 Body::~Body() {}
 
 void Body::Update(float deltaTime) {

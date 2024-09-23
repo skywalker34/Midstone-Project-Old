@@ -3,6 +3,8 @@
 #include "Scene.h"
 #include "Vector.h"
 #include "PlayerController.h"
+#include "Actor.h"
+#include "FriendlyShip.h"
 #include <Matrix.h>
 using namespace MATH;
 
@@ -21,6 +23,10 @@ private:
 	Matrix4 viewMatrix;
 	Matrix4 modelMatrix;
 	PlayerController playerController;
+	Vec3 destination = Vec3(0, 3.0f, 0);
+	Vec3 axis;
+	Quaternion newPosition;
+	FriendlyShip friendlyShip;
 	bool drawInWireMode;
 
 public:
