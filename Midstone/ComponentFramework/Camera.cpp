@@ -4,13 +4,15 @@
 void Camera::SetView(const Quaternion& orientation_, const Vec3& position_) {
 	transform.setOrientation(orientation_);
 	transform.setPos(position_);
-	view = MMath::toMatrix4(transform.getOrientation()) * MMath::translate(transform.getPos());
+	SetView(transform);
+	
 }
 
 void Camera::SetView(const Transform t_)
 {
-	transform = t_;
-	view = MMath::toMatrix4(transform.getOrientation()) * MMath::translate(transform.getPos());
+	DualQuat T = DQMath::translate(t_.getPos());
+	DualQuat R = DQMath::rotate(QMath::conjugate(t_.getOrientation()));
+	viewDq = T * R;
 }
 	
 Camera::Camera() {
@@ -27,6 +29,11 @@ Matrix4 Camera::GetProjectionMatrix() const {
 	return projection;
 }
 
+DualQuat Camera::GetViewDQuaternion() const
+{
+	return DualQuat(viewDq);
+}
+
 Matrix4 Camera::GetViewMatrix()const {
-	return view;
+	return DQMath::toMatrix4(viewDq);
 }

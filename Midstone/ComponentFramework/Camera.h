@@ -2,14 +2,16 @@
 #include <Vector.h>
 #include <Matrix.h>
 #include <Quaternion.h>
+#include <DQMath.h>
 #include "Transform.h"
 using namespace MATH;
+using namespace MATHEX;
 
 class Camera {
 private:
 	Transform transform;
 	Matrix4 projection;
-	Matrix4 view;
+	DualQuat viewDq;
 
 public:
 	Camera();
@@ -18,6 +20,7 @@ public:
 	void SetView(const Transform t_);
 	Matrix4 GetViewMatrix() const;
 	Matrix4 GetProjectionMatrix() const;
+	DualQuat GetViewDQuaternion() const;
 
 };
 
