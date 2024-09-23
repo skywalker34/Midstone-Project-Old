@@ -1,4 +1,0 @@
-﻿  Scene0g.cpp
-  This is wrong: Vec4 cross(const Vec4& a, const Vec4& b)
-  This questionable: Vec4 inverse(const Vec4& v)
-  ComponentFramework.vcxproj -> C:\Users\popho\Documents\GitHub\Midstone-Project\Midstone\Debug\ComponentFramework.exe
