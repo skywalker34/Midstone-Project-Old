@@ -110,10 +110,10 @@ void Scene0g::HandleEvents(const SDL_Event &sdlEvent) {
 
 void Scene0g::Update(const float deltaTime) {
 	if (!friendlyShip.hasReachDestination()) {
-		friendlyShip.moveToDestination(destination);
-		friendlyShip.body->Update(deltaTime);
-		friendlyShip.transform.setPos(friendlyShip.body->pos);
-		friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.body->pos) * MMath::scale(Vec3(0.2f, 0.2f, 0.2f));
+		friendlyShip.moveToDestination(destination);	///in the future this will only be called when a ship needs to move
+		friendlyShip.body->Update(deltaTime);	///eventually will go in the ship's update
+		friendlyShip.transform.setPos(friendlyShip.body->pos); /// see line 113 comment (same here)
+		friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.body->pos) * MMath::scale(Vec3(0.2f, 0.2f, 0.2f)); ///this will also be in the ship class
 	}
 	
 }
