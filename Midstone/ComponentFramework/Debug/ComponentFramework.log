@@ -1,4 +1,16 @@
-﻿  Scene0g.cpp
+﻿  Camera.cpp
   This is wrong: Vec4 cross(const Vec4& a, const Vec4& b)
   This questionable: Vec4 inverse(const Vec4& v)
+  PlayerController.cpp
+  This is wrong: Vec4 cross(const Vec4& a, const Vec4& b)
+  This questionable: Vec4 inverse(const Vec4& v)
+C:\Users\popho\Documents\GitHub\Midstone-Project\Midstone\ComponentFramework\PlayerController.cpp(68,68): warning C4244: 'argument': conversion from 'const Sint32' to 'float', possible loss of data
+C:\Users\popho\Documents\GitHub\Midstone-Project\Midstone\ComponentFramework\PlayerController.cpp(68,49): warning C4244: 'argument': conversion from 'const Sint32' to 'float', possible loss of data
+  Scene0g.cpp
+  This is wrong: Vec4 cross(const Vec4& a, const Vec4& b)
+  This questionable: Vec4 inverse(const Vec4& v)
+  SceneManager.cpp
+  This is wrong: Vec4 cross(const Vec4& a, const Vec4& b)
+  This questionable: Vec4 inverse(const Vec4& v)
+  Generating Code...
   ComponentFramework.vcxproj -> C:\Users\popho\Documents\GitHub\Midstone-Project\Midstone\Debug\ComponentFramework.exe
