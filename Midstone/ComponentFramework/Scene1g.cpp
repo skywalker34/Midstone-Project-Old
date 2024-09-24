@@ -24,7 +24,7 @@ bool Scene1g::OnCreate() {
 	sphere = new Body();
 	sphere->OnCreate();
 
-	mesh = new Mesh("meshes/Plane.obj");
+	mesh = new Mesh("meshes/Ship.obj");
 	mesh->OnCreate();
 	friendlyShip.model.mesh = new Mesh("meshes/Cube.obj");
 	friendlyShip.model.mesh->OnCreate();
@@ -42,6 +42,7 @@ bool Scene1g::OnCreate() {
 	projectionMatrix = MMath::perspective(45.0f, (16.0f / 9.0f), 0.5f, 100.0f);
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
 	modelMatrix.loadIdentity();
+	modelMatrix = MMath::translate(0, 0, -10) * MMath::scale(0.05f, 0.05f, 0.05f);
 	friendlyShip.shipModelMatrix = MMath::translate(Vec3(3.0f, 0, 0)) * MMath::scale(Vec3(0.2f, 0.2f, 0.2f));
 	return true;
 

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Scene1g.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -36,20 +36,20 @@
               "RelativeDocumentMoniker": "ComponentFramework\\SceneManager.h",
               "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.h",
               "RelativeToolTip": "ComponentFramework\\SceneManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-24T11:38:42.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Scene1g.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Scene1g.cpp",
-              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp",
-              "RelativeToolTip": "ComponentFramework\\Scene1g.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAeAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp*",
+              "RelativeToolTip": "ComponentFramework\\Scene1g.cpp*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACwAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-24T11:34:29.47Z",
               "EditorCaption": ""
@@ -64,18 +64,17 @@
               "RelativeToolTip": "ComponentFramework\\Actor.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-24T01:14:17.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T01:14:17.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SceneManager.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\SceneManager.cpp",
               "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\SceneManager.cpp",
               "RelativeToolTip": "ComponentFramework\\SceneManager.cpp",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAnwD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAnwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-24T00:07:51.251Z",
               "EditorCaption": ""
