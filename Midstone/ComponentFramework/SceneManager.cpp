@@ -4,6 +4,7 @@
 #include "Window.h"
 #include "Scene0g.h"
 #include "Scene0p.h"
+#include "Scene1g.h"
 
 
 SceneManager::SceneManager(): 
@@ -85,6 +86,8 @@ void SceneManager::HandleEvents() {
 				
 
 			case SDL_SCANCODE_F1:
+				BuildNewScene(SCENE_NUMBER::SCENE0p);
+				break;
 			case SDL_SCANCODE_F2:
 			case SDL_SCANCODE_F3:
 			case SDL_SCANCODE_F4:
@@ -122,6 +125,10 @@ bool SceneManager::BuildNewScene(SCENE_NUMBER scene) {
 		break;
 	case SCENE_NUMBER::SCENE0p:
 		currentScene = new Scene0p();
+		status = currentScene->OnCreate();
+		break;
+	case SCENE_NUMBER::SCENE1g:
+		currentScene = new Scene1g();
 		status = currentScene->OnCreate();
 		break;
 
