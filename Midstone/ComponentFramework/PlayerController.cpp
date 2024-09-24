@@ -32,8 +32,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 			//	below works *marginally* better (still jank af)
 			v = transform.getPos();
-			v += (-direction * speed);
-		
+			v += (VMath::normalize(-direction) * speed);
 			transform.setPos(v);
 			break;
 
