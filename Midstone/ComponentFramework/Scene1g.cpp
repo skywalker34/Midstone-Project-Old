@@ -24,7 +24,7 @@ bool Scene1g::OnCreate() {
 	sphere = new Body();
 	sphere->OnCreate();
 
-	mesh = new Mesh("meshes/Sphere.obj");
+	mesh = new Mesh("meshes/Plane.obj");
 	mesh->OnCreate();
 	friendlyShip.model.mesh = new Mesh("meshes/Cube.obj");
 	friendlyShip.model.mesh->OnCreate();

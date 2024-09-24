@@ -5,11 +5,13 @@
 class SceneManager  {
 public:
 	
+
 	SceneManager();
 	~SceneManager();
 	void Run();
 	bool Initialize(std::string name_, int width_, int height_);
 	void HandleEvents();
+	int currentSceneNumber = 0;
 	
 	
 private:
@@ -27,7 +29,7 @@ private:
 	class Scene* currentScene;
 	class Timer* timer;
 	class Window* window;
-
+	
 	unsigned int fps;
 	bool isRunning;
 	bool fullScreen;

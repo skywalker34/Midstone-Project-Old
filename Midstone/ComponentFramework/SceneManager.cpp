@@ -86,14 +86,18 @@ void SceneManager::HandleEvents() {
 				
 
 			case SDL_SCANCODE_F1:
-				BuildNewScene(SCENE_NUMBER::SCENE0p);
+				currentSceneNumber += 1;
+				BuildNewScene(SCENE_NUMBER::SCENE0g);
 				break;
 			case SDL_SCANCODE_F2:
+				currentSceneNumber -= 1;
+				BuildNewScene(SCENE_NUMBER::SCENE0g);
+				break;
 			case SDL_SCANCODE_F3:
 			case SDL_SCANCODE_F4:
 			case SDL_SCANCODE_F5:
 		
-				BuildNewScene(SCENE_NUMBER::SCENE0g);
+				
 				break;
 
 			default:
@@ -122,15 +126,15 @@ bool SceneManager::BuildNewScene(SCENE_NUMBER scene) {
 	case SCENE_NUMBER::SCENE0g:
 		currentScene = new Scene0g();
 		status = currentScene->OnCreate();
-		break;
+		if (currentSceneNumber == 0) break;
 	case SCENE_NUMBER::SCENE0p:
 		currentScene = new Scene0p();
 		status = currentScene->OnCreate();
-		break;
+		if (currentSceneNumber == 1) break;
 	case SCENE_NUMBER::SCENE1g:
 		currentScene = new Scene1g();
 		status = currentScene->OnCreate();
-		break;
+		if (currentSceneNumber == 2) break;
 
 	/*case SCENE_NUMBER::SCENE1g:
 		currentScene = new Scene1g();
