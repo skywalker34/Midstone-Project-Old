@@ -4,6 +4,7 @@
 #include "Window.h"
 #include "Scene0g.h"
 #include "Scene0p.h"
+#include "SceneUI.h"
 
 
 SceneManager::SceneManager(): 
@@ -48,7 +49,7 @@ bool SceneManager::Initialize(std::string name_, int width_, int height_) {
 	}
 
 	/********************************   Default first scene   ***********************/
-	BuildNewScene(SCENE_NUMBER::SCENE0g);
+	BuildNewScene(SCENE_NUMBER::SCENEUI);
 	/********************************************************************************/
 	return true;
 }
@@ -125,10 +126,10 @@ bool SceneManager::BuildNewScene(SCENE_NUMBER scene) {
 		status = currentScene->OnCreate();
 		break;
 
-	/*case SCENE_NUMBER::SCENE1g:
-		currentScene = new Scene1g();
+	case SCENE_NUMBER::SCENEUI:
+		currentScene = new SceneUI();
 		status = currentScene->OnCreate();
-		break;*/
+		break;
 
 	default:
 		Debug::Error("Incorrect scene number assigned in the manager", __FILE__, __LINE__);
