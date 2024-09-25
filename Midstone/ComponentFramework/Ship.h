@@ -1,6 +1,9 @@
 #pragma once
 #include "Actor.h"
 #include "Body.h"
+
+class Body;
+
 class Ship :
     public Actor
 {
@@ -14,6 +17,7 @@ class Ship :
 
         Ship() {}
         Ship(int health_, int damage_, float speed_);
+        //virtual void moveToPosition();
         ~Ship();
 };
 

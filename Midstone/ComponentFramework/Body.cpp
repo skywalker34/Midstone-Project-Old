@@ -1,11 +1,11 @@
 #include "Body.h"
 
-Body::Body(): pos{}, vel{}, accel{}, mass{0.0f}, mesh{nullptr},texture{nullptr} {
-}
+//Body::Body(): pos{}, vel{}, accel{}, mass{0.0f}, mesh{nullptr},texture{nullptr} {
+//}
 
-Body::Body(Vec3 pos_, Vec3 vel_, Vec3 accel_, float mass_)
+Body::Body(Transform* tran, Vec3 vel_, Vec3 accel_, float mass_)
 {
-	pos = pos_;
+	
 	vel = vel_;
 	accel = accel_;
 	mass = mass_;
@@ -15,7 +15,7 @@ Body::~Body() {}
 
 void Body::Update(float deltaTime) {
 	/// From 1st semester physics class
-	pos += vel * deltaTime + 0.5f * accel * deltaTime * deltaTime;
+	transform->setPos(transform->getPos() + vel * deltaTime + 0.5f * accel * deltaTime * deltaTime);
 	vel += accel * deltaTime;
 }
 

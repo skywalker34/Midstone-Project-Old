@@ -10,7 +10,7 @@
 #include "Shader.h"
 #include "Body.h"
 
-Scene1g::Scene1g() :sphere{ nullptr }, shader{ nullptr }, mesh{ nullptr },
+Scene1g::Scene1g() : shader{ nullptr }, mesh{ nullptr },
 drawInWireMode{ false } {
 	Debug::Info("Created Scene0: ", __FILE__, __LINE__);
 }
@@ -21,16 +21,14 @@ Scene1g::~Scene1g() {
 
 bool Scene1g::OnCreate() {
 	Debug::Info("Loading assets Scene0: ", __FILE__, __LINE__);
-	sphere = new Body();
-	sphere->OnCreate();
+	
 
-	mesh = new Mesh("meshes/Ship.obj");
+	mesh = new Mesh("meshes/Sphere.obj");
 	mesh->OnCreate();
-	friendlyShip.model.mesh = new Mesh("meshes/Cube.obj");
+	friendlyShip.model.mesh = new Mesh("meshes/Ship.obj");
 	friendlyShip.model.mesh->OnCreate();
-	friendlyShip.body = new Body(Vec3(), Vec3(), Vec3(), 0);
-	friendlyShip.transform.setPos(Vec3(3.0f, 0, 0));	// Do we need both
-	friendlyShip.body->pos = Vec3(3.0f, 0, 0);			// setPos and body->pos?
+	//added a pointer to fix the double transforms
+	friendlyShip.transform.setPos(Vec3(3.0f, 0, 0));
 
 	shader = new Shader("shaders/defaultVert.glsl", "shaders/defaultFrag.glsl");
 	if (shader->OnCreate() == false) {
@@ -42,8 +40,7 @@ bool Scene1g::OnCreate() {
 	projectionMatrix = MMath::perspective(45.0f, (16.0f / 9.0f), 0.5f, 100.0f);
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
 	modelMatrix.loadIdentity();
-	modelMatrix = MMath::translate(0, 0, -10) * MMath::scale(0.05f, 0.05f, 0.05f);
-	friendlyShip.shipModelMatrix = MMath::translate(Vec3(3.0f, 0, 0)) * MMath::scale(Vec3(0.2f, 0.2f, 0.2f));
+	friendlyShip.shipModelMatrix = MMath::translate(Vec3(3.0f, 0, 0)) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
 	return true;
 
 
@@ -51,8 +48,8 @@ bool Scene1g::OnCreate() {
 
 void Scene1g::OnDestroy() {
 	Debug::Info("Deleting assets Scene0: ", __FILE__, __LINE__);
-	sphere->OnDestroy();
-	delete sphere;
+
+	
 
 	mesh->OnDestroy();
 	delete mesh;
@@ -70,6 +67,10 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 
 
 	playerController.handleEvents(sdlEvent);
+	//basically whats happening here is that the player controller has a boolean flag thats basically saying "I have something to tell you scenemanager"
+	//the scene knows to check for this flag and to recieve the message so the playercontroller does not need to have a reference to the scene
+	//its basically just throwing out this variable and hoping something is listening
+	
 
 	switch (sdlEvent.type) {
 	case SDL_KEYDOWN:
@@ -78,7 +79,7 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 			drawInWireMode = !drawInWireMode;
 			break;
 		case SDL_SCANCODE_Z:
-			friendlyShip.moveToDestination(destination);
+			
 			//axis = VMath::cross(destination, actor.transform.getPos());
 			//newPosition = QMath::angleAxisRotation(1.0f, axis);
 			//actor.transform.setPos(QMath::rotate(actor.transform.getPos(), newPosition));
@@ -110,12 +111,18 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 }
 
 void Scene1g::Update(const float deltaTime) {
-	if (!friendlyShip.hasReachDestination()) {
-		friendlyShip.moveToDestination(destination);	///in the future this will only be called when a ship needs to move
-		friendlyShip.body->Update(deltaTime);	///eventually will go in the ship's update
-		friendlyShip.transform.setPos(friendlyShip.body->pos); /// see line 113 comment (same here)
-		friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.body->pos) * MMath::scale(Vec3(0.2f, 0.2f, 0.2f)); ///this will also be in the ship class
+
+	playerController.update(deltaTime);
+
+	if (playerController.IHave3DClick) {
+		playerController.getClickPos().print("3D click at: ");
+		shipWaypoint = playerController.getClickPos();
+		friendlyShip.moveToDestination(shipWaypoint);
 	}
+
+	
+
+	
 
 }
 

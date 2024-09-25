@@ -49,7 +49,7 @@ bool SceneManager::Initialize(std::string name_, int width_, int height_) {
 	}
 
 	/********************************   Default first scene   ***********************/
-	BuildNewScene(SCENE_NUMBER::SCENE0g);
+	BuildNewScene(SCENE_NUMBER::SCENE0g); 
 	/********************************************************************************/
 	return true;
 }
@@ -126,15 +126,18 @@ bool SceneManager::BuildNewScene(SCENE_NUMBER scene) {
 	case SCENE_NUMBER::SCENE0g:
 		currentScene = new Scene0g();
 		status = currentScene->OnCreate();
-		if (currentSceneNumber == 0) break;
+		//if (currentSceneNumber == 0) break;
+		break;
 	case SCENE_NUMBER::SCENE0p:
 		currentScene = new Scene0p();
 		status = currentScene->OnCreate();
-		if (currentSceneNumber == 1) break;
+		//if (currentSceneNumber == 1) break;
+		break;
 	case SCENE_NUMBER::SCENE1g:
 		currentScene = new Scene1g();
 		status = currentScene->OnCreate();
-		if (currentSceneNumber == 2) break;
+		//if (currentSceneNumber == 2) break;
+		break;
 
 	/*case SCENE_NUMBER::SCENE1g:
 		currentScene = new Scene1g();

@@ -14,7 +14,7 @@ class FriendlyShip :
 		Vec3 destination = Vec3(0, 0, 5.0f);
 
 		FriendlyShip() {}
-
+		bool wouldIntersectPlanet;
 		void moveToDestination(Vec3 destination);
 		bool hasReachDestination();
 

@@ -8,7 +8,7 @@
 #include "Shader.h"
 #include "Body.h"
 
-Scene0p::Scene0p() :sphere{nullptr}, shader{nullptr}, mesh{nullptr},
+Scene0p::Scene0p() : shader{nullptr}, mesh{nullptr},
 drawInWireMode{true} {
 	Debug::Info("Created Scene0: ", __FILE__, __LINE__);
 }
@@ -19,8 +19,7 @@ Scene0p::~Scene0p() {
 
 bool Scene0p::OnCreate() {
 	Debug::Info("Loading assets Scene0: ", __FILE__, __LINE__);
-	sphere = new Body();
-	sphere->OnCreate();
+
 	
 	mesh = new Mesh("meshes/Plane.obj");
 	mesh->OnCreate();
@@ -38,8 +37,8 @@ bool Scene0p::OnCreate() {
 
 void Scene0p::OnDestroy() {
 	Debug::Info("Deleting assets Scene0: ", __FILE__, __LINE__);
-	sphere->OnDestroy();
-	delete sphere;
+
+
 
 	mesh->OnDestroy();
 	delete mesh;

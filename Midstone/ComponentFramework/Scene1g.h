@@ -10,13 +10,12 @@ using namespace MATH;
 
 /// Forward declarations 
 union SDL_Event;
-class Body;
 class Mesh;
 class Shader;
 
 class Scene1g : public Scene {
 private:
-	Body* sphere;
+
 	Shader* shader;
 	Mesh* mesh;
 	Matrix4 projectionMatrix;
@@ -25,6 +24,7 @@ private:
 	PlayerController playerController;
 	Vec3 destination = Vec3(0, 3.0f, 0);
 	Vec3 axis;
+	Vec3 shipWaypoint;
 	Quaternion newPosition;
 	FriendlyShip friendlyShip;
 	bool drawInWireMode;
