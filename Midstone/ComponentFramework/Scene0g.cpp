@@ -25,7 +25,10 @@ bool Scene0g::OnCreate() {
 
 	mesh = new Mesh("meshes/Sphere.obj");
 	mesh->OnCreate();
-	friendlyShip.model.mesh = new Mesh("meshes/Ship.obj");
+	if (friendlyShip.OnCreate() == false) {
+		std::cout << "ship failed we have a problem";
+	}
+	friendlyShip.model.mesh = new Mesh("meshes/Cube.obj");
 	friendlyShip.model.mesh->OnCreate();
 	//added a pointer to fix the double transforms
 	friendlyShip.transform.setPos(Vec3(3.0f, 0, 0));
@@ -41,6 +44,8 @@ bool Scene0g::OnCreate() {
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
 	modelMatrix.loadIdentity();
 	friendlyShip.shipModelMatrix = MMath::translate(Vec3(3.0f, 0, 0)) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
+
+	printf("On Create finished!!!!!");
 	return true;
 
 
@@ -164,7 +169,7 @@ void Scene0g::Render() const {
 
 
 
-
+//below is teh scene0g that destroys the universe, why don't ask me I have no idea
 
 
 

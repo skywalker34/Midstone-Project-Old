@@ -5,7 +5,7 @@
 
 Body::Body(Transform* tran, Vec3 vel_, Vec3 accel_, float mass_)
 {
-	
+	transform = tran;
 	vel = vel_;
 	accel = accel_;
 	mass = mass_;

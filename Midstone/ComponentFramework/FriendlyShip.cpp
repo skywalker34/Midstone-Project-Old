@@ -1,5 +1,17 @@
 #include "FriendlyShip.h"
 
+FriendlyShip::FriendlyShip()
+{
+	body = new Body(&transform, Vec3(), Vec3(), 1);
+}
+
+bool FriendlyShip::OnCreate()
+{
+	printf("Ship Created! \n");
+	
+	return true;
+}
+
 void FriendlyShip::moveToDestination(Vec3 destination_)
 {
 	destination = destination_;
@@ -11,6 +23,12 @@ void FriendlyShip::moveToDestination(Vec3 destination_)
 		body->vel = speed * VMath::normalize(direction);
 	}
 	else {
+		if (body != nullptr) {
+			Vec3 diff = transform.getPos() - destination;
+			Vec3 direction = VMath::normalize(diff);
+			body->vel = direction * speed;
+			
+		}
 
 
 	}

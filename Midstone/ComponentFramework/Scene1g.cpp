@@ -25,6 +25,10 @@ bool Scene1g::OnCreate() {
 
 	mesh = new Mesh("meshes/Sphere.obj");
 	mesh->OnCreate();
+	if (friendlyShip.OnCreate() == false) {
+		std::cout << "ship failed we have a problem";
+	}
+	friendlyShip = FriendlyShip();
 	friendlyShip.model.mesh = new Mesh("meshes/Ship.obj");
 	friendlyShip.model.mesh->OnCreate();
 	//added a pointer to fix the double transforms
@@ -41,6 +45,8 @@ bool Scene1g::OnCreate() {
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
 	modelMatrix.loadIdentity();
 	friendlyShip.shipModelMatrix = MMath::translate(Vec3(3.0f, 0, 0)) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
+
+	printf("On Create finished!!!!!");
 	return true;
 
 
@@ -120,6 +126,9 @@ void Scene1g::Update(const float deltaTime) {
 		friendlyShip.moveToDestination(shipWaypoint);
 	}
 
+	if (friendlyShip.body != nullptr) friendlyShip.body->Update(deltaTime);
+	friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.transform.getPos()) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
+	
 	
 
 	

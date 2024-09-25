@@ -9,12 +9,22 @@ class FriendlyShip :
 	public Ship
 {
 	public:
+
+		//Inherited:
+		// Transform transform
+		// Model model
+		//health
+		//damage
+		//speed
+		//body
+		//modelmatrix
 		std::vector<Bullet> bullets;
 		ShipController controller;
 		Vec3 destination = Vec3(0, 0, 5.0f);
 
-		FriendlyShip() {}
-		bool wouldIntersectPlanet;
+		FriendlyShip();
+		bool OnCreate();
+		bool wouldIntersectPlanet = false;
 		void moveToDestination(Vec3 destination);
 		bool hasReachDestination();
 
