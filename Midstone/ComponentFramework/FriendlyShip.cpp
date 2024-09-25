@@ -1,8 +1,12 @@
 #include "FriendlyShip.h"
 
+
 FriendlyShip::FriendlyShip()
 {
+	transform = Transform(Vec3(0.0f, 0.0f, 0.0f), Quaternion(1.0f, Vec3(0.0f, 0.0f, 0.0f)), Vec3(1.0f, 1.0f, 1.0));
 	body = new Body(&transform, Vec3(), Vec3(), 1);
+	printf("FriendlyShip Constructor: Transform initialized with position (%f, %f, %f)\n", transform.getPos().x, transform.getPos().y, transform.getPos().z);
+	
 }
 
 bool FriendlyShip::OnCreate()
@@ -27,11 +31,14 @@ void FriendlyShip::moveToDestination(Vec3 destination_)
 			Vec3 diff = transform.getPos() - destination;
 			Vec3 direction = VMath::normalize(diff);
 			body->vel = direction * speed;
+			printf("moveToDestination: Transform position (%f, %f, %f)\n", transform.getPos().x, transform.getPos().y, transform.getPos().z);
 			
 		}
 
 
 	}
+
+	
 }
 
 bool FriendlyShip::hasReachDestination()

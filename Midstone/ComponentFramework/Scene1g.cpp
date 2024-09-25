@@ -85,18 +85,26 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 			drawInWireMode = !drawInWireMode;
 			break;
 		case SDL_SCANCODE_Z:
-			
+
 			//axis = VMath::cross(destination, actor.transform.getPos());
 			//newPosition = QMath::angleAxisRotation(1.0f, axis);
 			//actor.transform.setPos(QMath::rotate(actor.transform.getPos(), newPosition));
+			friendlyShip.transform.setPos(Vec3(friendlyShip.transform.getPos().x - 1.0f, 0.0f, 0.0f));
 			break;
 		case SDL_SCANCODE_X:
 
 			//axis = VMath::cross(destination, actor.transform.getPos());
 			//newPosition = QMath::angleAxisRotation(-1.0f, axis);
 			//actor.transform.setPos(QMath::rotate(actor.transform.getPos(), newPosition));
+			friendlyShip.transform.setPos(Vec3(friendlyShip.transform.getPos().x + 1.0f, 0.0f,0.0f));
+			break;
+
+		case SDL_SCANCODE_P:
+			//allows us to pause and unpause time, whoah.
+			simRunning = !simRunning;
 			break;
 		}
+
 		break;
 
 
@@ -117,19 +125,19 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 }
 
 void Scene1g::Update(const float deltaTime) {
+	if (simRunning) {
+		playerController.update(deltaTime);
 
-	playerController.update(deltaTime);
+		if (playerController.IHave3DClick) {
+			playerController.getClickPos().print("3D click at: ");
+			shipWaypoint = playerController.getClickPos();
+			friendlyShip.moveToDestination(shipWaypoint);
+		}
 
-	if (playerController.IHave3DClick) {
-		playerController.getClickPos().print("3D click at: ");
-		shipWaypoint = playerController.getClickPos();
-		friendlyShip.moveToDestination(shipWaypoint);
+		if (friendlyShip.body != nullptr) friendlyShip.body->Update(deltaTime);
+		friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.transform.getPos()) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
+
 	}
-
-	if (friendlyShip.body != nullptr) friendlyShip.body->Update(deltaTime);
-	friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.transform.getPos()) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
-	
-	
 
 	
 

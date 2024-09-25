@@ -16,6 +16,6 @@ public:
 	// Functions:
 	// render
 
-	~Actor();
+    ~Actor();
 };
 

@@ -28,6 +28,7 @@ private:
 	Quaternion newPosition;
 	FriendlyShip friendlyShip;
 	bool drawInWireMode;
+	bool simRunning = true;
 
 public:
 	explicit Scene1g();
