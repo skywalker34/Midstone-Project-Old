@@ -16,12 +16,13 @@ private:
 	enum class SCENE_NUMBER {
 		SCENE0g = 0,
 		SCENE0p,
-		SCENEUI,
+		SCENE1,
 		SCENE2,
 		SCENE3,
 		SCENE4,
 		SCENE5,
-		SCENE6
+		SCENE6,
+		SCENEUI
 	};
 
 	class Scene* currentScene;
