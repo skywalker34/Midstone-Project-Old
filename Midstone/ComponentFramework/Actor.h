@@ -1,6 +1,7 @@
 #pragma once
 #include "Model.h"
 #include "Transform.h"
+#include "sphere.h"
 //#include "Sphere.h"
 class Actor
 {
@@ -10,6 +11,8 @@ public:
 	//MATHEX::Sphere collider;
 	Transform transform;
 	Model model;
+
+	Sphere* collisionSphere = nullptr;
 
 	Actor() {}
 	Actor(Transform transform_, Model model_);

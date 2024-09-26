@@ -24,6 +24,8 @@ class FriendlyShip :
 
 		bool isMoving;
 
+		Sphere* detectionSphere = nullptr;
+
 		FriendlyShip();
 		bool OnCreate();
 		void Update(const float deltaTime);
