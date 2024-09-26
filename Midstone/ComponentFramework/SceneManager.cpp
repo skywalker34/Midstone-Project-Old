@@ -5,7 +5,7 @@
 #include "Scene0g.h"
 #include "Scene0p.h"
 #include "Scene1g.h"
-#include "SceneUI.h"
+
 
 
 
@@ -148,10 +148,7 @@ bool SceneManager::BuildNewScene(SCENE_NUMBER scene) {
 		status = currentScene->OnCreate();
 		break;*/
 
-	case SCENE_NUMBER::SCENEUI:
-		currentScene = new SceneUI();
-		status = currentScene->OnCreate();
-		break;
+	
 
 	default:
 		Debug::Error("Incorrect scene number assigned in the manager", __FILE__, __LINE__);

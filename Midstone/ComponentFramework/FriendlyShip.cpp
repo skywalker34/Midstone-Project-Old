@@ -22,11 +22,11 @@ bool FriendlyShip::OnCreate()
 void FriendlyShip::Update(const float deltaTime)
 {
 	
-	if (moving) {
+	if (isMoving) {
 		transform = body->Update(deltaTime, transform);
 		if (VMath::mag(destination - transform.getPos()) < 0.01) {
 			body->vel = Vec3();
-			moving = false;
+			isMoving = false;
 		}
 	}
 	
@@ -38,7 +38,7 @@ void FriendlyShip::Update(const float deltaTime)
 void FriendlyShip::moveToDestination(Vec3 destination_)
 {
 	destination = destination_;
-	moving = true;
+	isMoving = true;
 	if (wouldIntersectPlanet) {
 		
 		Vec3 axis = VMath::cross(destination, transform.getPos());

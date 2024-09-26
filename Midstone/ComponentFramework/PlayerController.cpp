@@ -71,7 +71,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 	case SDL_MOUSEBUTTONDOWN:
 
 	{
-		IHave3DClick = true;
+		has3DClick = true;
 		Vec4 mousePosPixelSpace = Vec4(sdlEvent.button.x, sdlEvent.button.y, 0, 1);
 
 		Vec4 mousePosNDCSpace = MMath::inverse(MMath::viewportNDC(1280, 720)) * mousePosPixelSpace;
@@ -132,7 +132,7 @@ void PlayerController::update(const float deltaTime)
 
 Vec3 PlayerController::getClickPos()
 {
-	IHave3DClick = false;
+	has3DClick = false;
 	return clickPos;
 	
 }

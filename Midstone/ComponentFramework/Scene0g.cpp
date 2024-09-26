@@ -119,7 +119,7 @@ void Scene0g::Update(const float deltaTime) {
 
 	playerController.update(deltaTime);
 
-	if (playerController.IHave3DClick) {
+	if (playerController.has3DClick) {
 		playerController.getClickPos().print("3D click at: ");
 		shipWaypoint = playerController.getClickPos();
 		friendlyShip.moveToDestination(shipWaypoint);

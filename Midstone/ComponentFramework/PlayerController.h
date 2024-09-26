@@ -22,7 +22,7 @@ class PlayerController
 
 	public:
 		Camera camera;
-		bool IHave3DClick = false;
+		bool has3DClick = false;
 		bool OnCreate();
 		void OnDestroy();
 		void handleEvents(const SDL_Event& sdlEvent);
