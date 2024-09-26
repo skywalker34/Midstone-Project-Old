@@ -21,8 +21,8 @@ class FriendlyShip :
 		std::vector<Bullet> bullets;
 		ShipController controller;
 		Vec3 destination = Vec3(0, 0, 5.0f);
-
-		bool isMoving;
+		Vec3 moveDirection;
+		bool isMoving = false;
 
 		FriendlyShip();
 		bool OnCreate();

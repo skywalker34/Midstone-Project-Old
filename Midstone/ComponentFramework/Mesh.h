@@ -3,6 +3,7 @@
 #include <glew.h>
 #include <vector>
 #include <Vector.h>
+
 using namespace MATH;
 
 class Mesh {

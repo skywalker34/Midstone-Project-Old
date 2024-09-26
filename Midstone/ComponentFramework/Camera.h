@@ -9,11 +9,12 @@ using namespace MATHEX;
 
 class Camera {
 private:
-	Transform transform;
+	
 	Matrix4 projection;
 	DualQuat viewDq;
 
 public:
+	Transform transform;//temp here (move back to private later)
 	Camera();
 	~Camera();
 	void SetView(const Quaternion& orientation_, const Vec3& position_);
