@@ -1,35 +1,17 @@
 #include "Body.h"
 
-//Body::Body(): pos{}, vel{}, accel{}, mass{0.0f}, mesh{nullptr},texture{nullptr} {
-//}
-
-//Body::Body(Transform& tran, Vec3 vel_, Vec3 accel_, float mass_, int *test)
-//{
-//	transform = tran;
-//	vel = vel_;
-//	accel = accel_;
-//	mass = mass_;
-//	
-//
-//	paul = test;
-//	*test += 1;
-//	*paul += 1;
-//	
-//}
 
 Body::~Body() {}
 
-void Body::Update(float deltaTime) {
+Transform Body::Update(const float deltaTime, Transform t) {
+	//refactor this if I can figure out references/shared/pointers (I was banging my head against teh wall for 2 days so I'm just going to do the return for the time being.
+	transform = t; //sets the bodies transform to the passed argument
+	Vec3 v = transform.getPos(); //gets and temporarily stores the transform position
+	
+	transform.setPos(v + vel * deltaTime + 0.5f * accel * deltaTime * deltaTime);//sets new position using kinematics
+	vel += accel * deltaTime;//update velocity
 
-	transform.getPos().print("AAAAAAAAAAAAAAAAAAAAAAAAH ");
-	transform.setPos(Vec3(1, 1, 1));
-	/*printf("Before Update: Transform position (%f, %f, %f)\n", transform->getPos().x, transform->getPos().y, transform->getPos().z);
-	Vec3 v = transform->getPos();
-	transform->setPos(v + vel * deltaTime + 0.5f * accel * deltaTime * deltaTime);
-	printf("After Update: Transform position (%f, %f, %f)\n", transform->getPos().x, transform->getPos().y, transform->getPos().z);
-	vel.print("Ship Velocity: ");
-	transform->getPos().print("Ship Position: ");
-	vel += accel * deltaTime;*/
+	return transform;
 }
 
 void Body::ApplyForce(Vec3 force) {

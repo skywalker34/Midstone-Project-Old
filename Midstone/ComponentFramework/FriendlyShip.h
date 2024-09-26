@@ -22,7 +22,7 @@ class FriendlyShip :
 		ShipController controller;
 		Vec3 destination = Vec3(0, 0, 5.0f);
 
-		int tester = 0;
+		bool moving;
 
 		FriendlyShip();
 		bool OnCreate();

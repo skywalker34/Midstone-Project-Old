@@ -44,7 +44,7 @@ bool Scene1g::OnCreate() {
 	projectionMatrix = MMath::perspective(45.0f, (16.0f / 9.0f), 0.5f, 100.0f);
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
 	modelMatrix.loadIdentity();
-	friendlyShip.shipModelMatrix = MMath::translate(Vec3(3.0f, 0, 0)) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
+	friendlyShip.shipModelMatrix =  MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
 
 	printf("On Create finished!!!!!");
 	return true;

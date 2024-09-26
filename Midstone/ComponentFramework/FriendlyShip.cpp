@@ -21,10 +21,14 @@ bool FriendlyShip::OnCreate()
 
 void FriendlyShip::Update(const float deltaTime)
 {
-	body->Update(deltaTime);
 	
-	
-	transform.getPos().print("Position");
+	if (moving) {
+		transform = body->Update(deltaTime, transform);
+		if (VMath::mag(destination - transform.getPos()) < 0.01) {
+			body->vel = Vec3();
+			moving = false;
+		}
+	}
 	
 }
 
@@ -34,6 +38,7 @@ void FriendlyShip::Update(const float deltaTime)
 void FriendlyShip::moveToDestination(Vec3 destination_)
 {
 	destination = destination_;
+	moving = true;
 	if (wouldIntersectPlanet) {
 		
 		Vec3 axis = VMath::cross(destination, transform.getPos());
@@ -43,9 +48,9 @@ void FriendlyShip::moveToDestination(Vec3 destination_)
 	}
 	else {
 		if (body != nullptr) {
-			Vec3 diff = transform.getPos() - destination;
-			Vec3 direction = VMath::normalize(diff);
-			body->vel = direction * speed;
+			Vec3 diff =  destination - transform.getPos(); //"draw" a vector between the 2 points
+			Vec3 direction = VMath::normalize(diff);//"convert" thevector into just a direction (normalize)
+			body->vel = direction * speed; //tell the ship to move along that vector
 			printf("moveToDestination: Transform position (%f, %f, %f)\n", transform.getPos().x, transform.getPos().y, transform.getPos().z);
 			
 		}
