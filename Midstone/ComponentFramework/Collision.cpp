@@ -11,7 +11,7 @@ bool COLLISION::SphereSphereCollisionDetected(const Sphere* body1, const Sphere*
 	// If distance <= r1 + r2, then result = true
 	float sumOfRadii = body1->radius + body2->radius;
 	//Find distance between two Bodies
-	float distance = VMath::mag(body2->pos - body1->pos); //float distance = sqrt(pow(body2->pos.x - body1->pos.x, 2)) + sqrt(pow(body2->pos.y - body1->pos.y, 2)) + sqrt(pow(body2->pos.z - body1->pos.z, 2));
+	float distance = VMath::mag(body2->transform - body1->transform); //float distance = sqrt(pow(body2->pos.x - body1->pos.x, 2)) + sqrt(pow(body2->pos.y - body1->pos.y, 2)) + sqrt(pow(body2->pos.z - body1->pos.z, 2));
 	if (distance <= sumOfRadii)
 	{
 		result = true;
@@ -23,7 +23,6 @@ void COLLISION::SphereSphereCollisionResponse(Sphere* body1, Sphere* body2) {
 	std::cout << "We have impact baby or in this case... I SEE YOU!" << std::endl;
 
 	//Not needed but im gonna keep this here for good measure
-	
 	//// Following Umer's assignment
 	//// Step 1, find the normal vector (vector from body1 to body2)
 	//Vec3 normal; // Remember to normalize this
