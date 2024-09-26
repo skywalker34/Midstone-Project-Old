@@ -8,7 +8,7 @@ Model::Model(std::string meshName_)
 {
 	meshName =  meshName_;
 	fileName = filePath + meshName;
-	std::cout << fileName;
+	
 }
 
 bool Model::OnCreate()

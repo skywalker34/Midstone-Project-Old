@@ -3,6 +3,33 @@
   "WorkspaceRootPath": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\FriendlyShip.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Scene1g.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Body.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GameDev\\MathLibrary\\include\\VMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\PlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\PlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\FriendlyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -15,20 +42,8 @@
       "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\PlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\PlayerController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Scene1g.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -51,24 +66,12 @@
       "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Scene1g.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\FriendlyShip.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Body.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\Body.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{614C2865-E38B-423B-8A72-E9D57BC43A73}|ComponentFramework\\ComponentFramework.vcxproj|solutionrelative:ComponentFramework\\FriendlyShip.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,11 +81,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
+              "Title": "VMath.h",
+              "DocumentMoniker": "C:\\GameDev\\MathLibrary\\include\\VMath.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GameDev\\MathLibrary\\include\\VMath.h",
+              "ToolTip": "C:\\GameDev\\MathLibrary\\include\\VMath.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GameDev\\MathLibrary\\include\\VMath.h",
+              "ViewState": "AgIAAB0AAAAAAAAAAIAwwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-26T18:03:38.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Mesh.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Mesh.h",
               "RelativeDocumentMoniker": "ComponentFramework\\Mesh.h",
@@ -94,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Mesh.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Mesh.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Mesh.cpp",
@@ -106,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Model.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Model.h",
               "RelativeDocumentMoniker": "ComponentFramework\\Model.h",
@@ -114,25 +130,24 @@
               "RelativeToolTip": "ComponentFramework\\Model.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-26T16:00:42.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T16:00:42.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Model.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Model.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Model.cpp",
-              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Model.cpp*",
-              "RelativeToolTip": "ComponentFramework\\Model.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Model.cpp",
+              "RelativeToolTip": "ComponentFramework\\Model.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-26T16:00:32.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Transform.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Transform.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Transform.cpp",
@@ -145,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Actor.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Actor.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Actor.cpp",
@@ -153,12 +168,11 @@
               "RelativeToolTip": "ComponentFramework\\Actor.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-26T15:48:47.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T15:48:47.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Actor.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Actor.h",
               "RelativeDocumentMoniker": "ComponentFramework\\Actor.h",
@@ -170,20 +184,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PlayerController.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\PlayerController.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\PlayerController.cpp",
               "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\PlayerController.cpp",
               "RelativeToolTip": "ComponentFramework\\PlayerController.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-26T14:24:17.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "PlayerController.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\PlayerController.h",
               "RelativeDocumentMoniker": "ComponentFramework\\PlayerController.h",
@@ -195,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Camera.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Camera.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Camera.cpp",
@@ -207,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Camera.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Camera.h",
               "RelativeDocumentMoniker": "ComponentFramework\\Camera.h",
@@ -219,31 +233,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "FriendlyShip.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\FriendlyShip.cpp",
-              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.cpp",
-              "RelativeToolTip": "ComponentFramework\\FriendlyShip.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.cpp*",
+              "RelativeToolTip": "ComponentFramework\\FriendlyShip.cpp*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-25T16:21:21.779Z"
+              "WhenOpened": "2024-09-25T16:21:21.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 6,
               "Title": "FriendlyShip.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.h",
               "RelativeDocumentMoniker": "ComponentFramework\\FriendlyShip.h",
               "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\FriendlyShip.h",
               "RelativeToolTip": "ComponentFramework\\FriendlyShip.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-25T17:14:49.226Z"
+              "WhenOpened": "2024-09-25T17:14:49.226Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
               "Title": "Body.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Body.cpp",
@@ -251,11 +267,12 @@
               "RelativeToolTip": "ComponentFramework\\Body.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-25T16:45:11.946Z"
+              "WhenOpened": "2024-09-25T16:45:11.946Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Body.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Body.h",
               "RelativeDocumentMoniker": "ComponentFramework\\Body.h",
@@ -267,19 +284,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Scene1g.cpp",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp",
               "RelativeDocumentMoniker": "ComponentFramework\\Scene1g.cpp",
               "ToolTip": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.cpp",
               "RelativeToolTip": "ComponentFramework\\Scene1g.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-24T11:34:29.47Z"
+              "WhenOpened": "2024-09-24T11:34:29.47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Scene1g.h",
               "DocumentMoniker": "C:\\Users\\popho\\Documents\\GitHub\\Midstone-Project\\Midstone\\ComponentFramework\\Scene1g.h",
               "RelativeDocumentMoniker": "ComponentFramework\\Scene1g.h",

@@ -46,7 +46,7 @@ bool Scene1g::OnCreate() {
 	projectionMatrix = MMath::perspective(45.0f, (16.0f / 9.0f), 0.5f, 100.0f);
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
 	modelMatrix.loadIdentity();
-	friendlyShip.shipModelMatrix =  MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
+	
 
 	printf("On Create finished!!!!!");
 	return true;
@@ -131,16 +131,17 @@ void Scene1g::Update(const float deltaTime) {
 	
 	if (simRunning) {
 		playerController.Update(deltaTime);
-		friendlyShip.Update(deltaTime);
+		
 
 		if (playerController.has3DClick) {
 			playerController.getClickPos().print("3D click at: ");
 			shipWaypoint = playerController.getClickPos();
 			friendlyShip.moveToDestination(shipWaypoint);
 		}
-
+		friendlyShip.Update(deltaTime);
+		 
 		
-		friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.transform.getPos()) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
+		friendlyShip.shipModelMatrix = friendlyShip.transform.toModelMatrix();
 
 	}
 
