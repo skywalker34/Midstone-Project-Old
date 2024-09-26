@@ -31,8 +31,8 @@ bool Scene1g::OnCreate() {
 	friendlyShip = FriendlyShip();
 	friendlyShip.model.mesh = new Mesh("meshes/Ship.obj");
 	friendlyShip.model.mesh->OnCreate();
-	//added a pointer to fix the double transforms
-	friendlyShip.transform.setPos(Vec3(3.0f, 0, 0));
+	
+	friendlyShip.transform.setPos(Vec3(0.0f, 0, 0));
 
 	shader = new Shader("shaders/defaultVert.glsl", "shaders/defaultFrag.glsl");
 	if (shader->OnCreate() == false) {
@@ -125,8 +125,11 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 }
 
 void Scene1g::Update(const float deltaTime) {
+
+	
 	if (simRunning) {
 		playerController.update(deltaTime);
+		friendlyShip.Update(deltaTime);
 
 		if (playerController.IHave3DClick) {
 			playerController.getClickPos().print("3D click at: ");
@@ -134,7 +137,7 @@ void Scene1g::Update(const float deltaTime) {
 			friendlyShip.moveToDestination(shipWaypoint);
 		}
 
-		if (friendlyShip.body != nullptr) friendlyShip.body->Update(deltaTime);
+		
 		friendlyShip.shipModelMatrix = MMath::translate(friendlyShip.transform.getPos()) * MMath::scale(Vec3(0.02f, 0.02f, 0.02f));
 
 	}

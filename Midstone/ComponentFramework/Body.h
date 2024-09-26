@@ -12,14 +12,16 @@ using namespace MATH;
 class Body {
 public:
     Body();
-	Body(Transform* tran, Vec3 vel_, Vec3 acc_, float mass_);
+	Body(Transform& tran, Vec3 vel_, Vec3 acc_, float mass_)
+		: transform(tran), vel(vel_), accel(acc_), mass(mass_) {}
     ~Body();
 // private: /// Physics stuff
 	Vec3 pos;
 	Vec3 vel;
 	Vec3 accel;
-	Transform* transform;
+	Transform& transform;
 
+	int* paul;
 	float mass;
 private: /// Graphics stuff 
 	

@@ -4,7 +4,10 @@
 FriendlyShip::FriendlyShip()
 {
 	transform = Transform(Vec3(0.0f, 0.0f, 0.0f), Quaternion(1.0f, Vec3(0.0f, 0.0f, 0.0f)), Vec3(1.0f, 1.0f, 1.0));
-	body = new Body(&transform, Vec3(), Vec3(), 1);
+	body = new Body(transform, Vec3(), Vec3(), 1);
+
+	
+	
 	printf("FriendlyShip Constructor: Transform initialized with position (%f, %f, %f)\n", transform.getPos().x, transform.getPos().y, transform.getPos().z);
 	
 }
@@ -15,6 +18,18 @@ bool FriendlyShip::OnCreate()
 	
 	return true;
 }
+
+void FriendlyShip::Update(const float deltaTime)
+{
+	body->Update(deltaTime);
+	
+	
+	transform.getPos().print("Position");
+	
+}
+
+
+
 
 void FriendlyShip::moveToDestination(Vec3 destination_)
 {
