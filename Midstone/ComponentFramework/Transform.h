@@ -24,5 +24,7 @@ class Transform
 		Vec3 getPos() const;
 		Vec3 getScale() const;
 		Quaternion getOrientation() const;
+		//builds a model matrix based off of a transform
+		Matrix4 toModelMatrix() const;
 };
 

@@ -39,7 +39,9 @@ bool Scene1g::OnCreate() {
 		std::cout << "Shader failed ... we have a problem\n";
 	}
 
-	playerController.OnCreate();
+	if (playerController.OnCreate() == false) {
+		std::cout << "Controller failed ... we have a problem\n";
+	}
 
 	projectionMatrix = MMath::perspective(45.0f, (16.0f / 9.0f), 0.5f, 100.0f);
 	viewMatrix = MMath::lookAt(Vec3(0.0f, 0.0f, 5.0f), Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, 1.0f, 0.0f));
@@ -128,7 +130,7 @@ void Scene1g::Update(const float deltaTime) {
 
 	
 	if (simRunning) {
-		playerController.update(deltaTime);
+		playerController.Update(deltaTime);
 		friendlyShip.Update(deltaTime);
 
 		if (playerController.has3DClick) {
@@ -162,8 +164,12 @@ void Scene1g::Render() const {
 	glUniformMatrix4fv(shader->GetUniformID("viewMatrix"), 1, GL_FALSE, playerController.camera.GetViewMatrix());
 	glUniformMatrix4fv(shader->GetUniformID("modelMatrix"), 1, GL_FALSE, modelMatrix);
 	mesh->Render(GL_TRIANGLES);
+	
 	glUniformMatrix4fv(shader->GetUniformID("modelMatrix"), 1, GL_FALSE, friendlyShip.shipModelMatrix);
 	friendlyShip.model.mesh->Render(GL_TRIANGLES);
+
+	playerController.Render(shader);
+
 	glUseProgram(0);
 }
 

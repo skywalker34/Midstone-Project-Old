@@ -11,6 +11,9 @@ bool PlayerController::OnCreate()
 	//here for future improvements
 	transform.setPos(Vec3(0, 0, 20));
 	
+	clickGrid = Actor(Transform(), Model("Plane.obj"));
+
+	if (clickGrid.OnCreate() == false) return false;
 	return true;
 	
 }
@@ -108,6 +111,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 	case SDL_MOUSEWHEEL:
 		planeDepth += sdlEvent.wheel.preciseY;
+		clickGrid.transform.setPos(Vec3(0.0f, 0.0f, -planeDepth));
 		//plane depth increases if the mouse is wheeled up (by the amount the mouse is wheeled)
 		//plane depth decreases if the mouse is wheeled down (by the amount the mouse is wheeled)
 
@@ -121,13 +125,15 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 }
 
-void PlayerController::update(const float deltaTime)
+void PlayerController::Update(const float deltaTime)
 {
 	camera.SetView(transform);
-	transform.getPos().print("Player: POS: ");
-	if (camera.transform.getPos() == transform.getPos()) {
-		printf("Match!");
-	}
+	
+}
+
+void PlayerController::Render(Shader* shader) const
+{
+	clickGrid.Render(shader);
 }
 
 

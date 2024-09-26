@@ -15,7 +15,6 @@ void Camera::SetView(const Transform t_)
 	DualQuat R = DQMath::rotate(QMath::conjugate(transform.getOrientation()));
 	viewDq = R * T;
 
-	transform.getPos().print("Camera: POS: ");
 }
 	
 Camera::Camera() {
