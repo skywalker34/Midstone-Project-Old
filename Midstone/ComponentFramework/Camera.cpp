@@ -12,7 +12,7 @@ void Camera::SetView(const Transform t_)
 {
 	DualQuat T = DQMath::translate(t_.getPos());
 	DualQuat R = DQMath::rotate(QMath::conjugate(t_.getOrientation()));
-	viewDq = T * R;
+	viewDq = R * T;
 }
 	
 Camera::Camera() {
