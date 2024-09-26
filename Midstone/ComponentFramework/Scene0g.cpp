@@ -117,7 +117,7 @@ void Scene0g::HandleEvents(const SDL_Event& sdlEvent) {
 
 void Scene0g::Update(const float deltaTime) {
 
-	playerController.update(deltaTime);
+	playerController.Update(deltaTime);
 
 	if (playerController.has3DClick) {
 		playerController.getClickPos().print("3D click at: ");

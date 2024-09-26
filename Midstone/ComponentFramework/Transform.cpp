@@ -1,4 +1,5 @@
 #include "Transform.h"
+#include "MMath.h"
 
 Transform::Transform(Vec3 _position, Quaternion _orientation, Vec3 _scale)
 {
@@ -46,4 +47,14 @@ Vec3 Transform::getScale() const
 Quaternion Transform::getOrientation() const
 {
 	return orientation;
+}
+
+Matrix4 Transform::toModelMatrix() const
+{
+	Matrix4 R = MMath::toMatrix4(orientation);
+	Matrix4 T = MMath::translate(position);
+	Matrix4 S = MMath::scale(scale);
+
+	Matrix4 modelMat = T * R * S;
+	return modelMat;
 }

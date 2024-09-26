@@ -4,9 +4,10 @@
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "tiny_obj_loader.h"
 
-Mesh::Mesh(const char* filename_):dateLength{0}, drawmode{0}, 
+Mesh::Mesh(const char* filename_):dateLength{0}, drawmode{0},
 vao{0}, vbo{0} {
 	filename = filename_;
+    std::cout << filename;
 }
 
 Mesh::~Mesh() {}

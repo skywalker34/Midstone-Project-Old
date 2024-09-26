@@ -9,8 +9,11 @@
 bool PlayerController::OnCreate()
 {
 	//here for future improvements
-	transform.setPos(Vec3(0, 0, -20));
-	camera.SetView(transform);
+	transform.setPos(Vec3(0, 0, 20));
+	
+	clickGrid = Actor(Transform(), Model("Plane.obj"));
+
+	if (clickGrid.OnCreate() == false) return false;
 	return true;
 	
 }
@@ -32,10 +35,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 			//	below works *marginally* better (still jank af)
 			v = transform.getPos();
-		
-
-			v += (VMath::normalize(-direction) * speed);
-
+			v += (VMath::normalize(direction) * speed);
 			transform.setPos(v);
 			break;
 
@@ -44,8 +44,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 
 			v = transform.getPos();
-			v += (-direction * speed);
-
+			v += (VMath::normalize(-direction) * speed);
 			transform.setPos(v);
 			break;
 
@@ -72,7 +71,10 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 	{
 		has3DClick = true;
+
+		//below referenced from physics(semester 2) week 14
 		Vec4 mousePosPixelSpace = Vec4(sdlEvent.button.x, sdlEvent.button.y, 0, 1);
+		
 
 		Vec4 mousePosNDCSpace = MMath::inverse(MMath::viewportNDC(1280, 720)) * mousePosPixelSpace;
 		// Let's get the front of the NDC box
@@ -109,6 +111,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 	case SDL_MOUSEWHEEL:
 		planeDepth += sdlEvent.wheel.preciseY;
+		clickGrid.transform.setPos(Vec3(0.0f, 0.0f, -planeDepth));
 		//plane depth increases if the mouse is wheeled up (by the amount the mouse is wheeled)
 		//plane depth decreases if the mouse is wheeled down (by the amount the mouse is wheeled)
 
@@ -122,9 +125,15 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 }
 
-void PlayerController::update(const float deltaTime)
+void PlayerController::Update(const float deltaTime)
 {
 	camera.SetView(transform);
+	
+}
+
+void PlayerController::Render(Shader* shader) const
+{
+	clickGrid.Render(shader);
 }
 
 
