@@ -6,4 +6,6 @@ Actor::Actor(Transform transform_, Model model_)
 	model = model_;
 }
 
+
+
 Actor::~Actor() {}

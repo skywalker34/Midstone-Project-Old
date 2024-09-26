@@ -4,7 +4,9 @@
 #include "Window.h"
 #include "Scene0g.h"
 #include "Scene0p.h"
-#include "SceneUI.h"
+#include "Scene1g.h"
+
+
 
 
 SceneManager::SceneManager(): 
@@ -49,7 +51,9 @@ bool SceneManager::Initialize(std::string name_, int width_, int height_) {
 	}
 
 	/********************************   Default first scene   ***********************/
-	BuildNewScene(SCENE_NUMBER::SCENEUI);
+
+	BuildNewScene(SCENE_NUMBER::SCENE1g); 
+
 	/********************************************************************************/
 	return true;
 }
@@ -86,12 +90,18 @@ void SceneManager::HandleEvents() {
 				
 
 			case SDL_SCANCODE_F1:
+				currentSceneNumber += 1;
+				BuildNewScene(SCENE_NUMBER::SCENE0g);
+				break;
 			case SDL_SCANCODE_F2:
+				currentSceneNumber -= 1;
+				BuildNewScene(SCENE_NUMBER::SCENE0g);
+				break;
 			case SDL_SCANCODE_F3:
 			case SDL_SCANCODE_F4:
 			case SDL_SCANCODE_F5:
 		
-				BuildNewScene(SCENE_NUMBER::SCENE0g);
+				
 				break;
 
 			default:
@@ -120,10 +130,17 @@ bool SceneManager::BuildNewScene(SCENE_NUMBER scene) {
 	case SCENE_NUMBER::SCENE0g:
 		currentScene = new Scene0g();
 		status = currentScene->OnCreate();
+		//if (currentSceneNumber == 0) break;
 		break;
 	case SCENE_NUMBER::SCENE0p:
 		currentScene = new Scene0p();
 		status = currentScene->OnCreate();
+		//if (currentSceneNumber == 1) break;
+		break;
+	case SCENE_NUMBER::SCENE1g:
+		currentScene = new Scene1g();
+		status = currentScene->OnCreate();
+		//if (currentSceneNumber == 2) break;
 		break;
 
 	/*case SCENE_NUMBER::SCENE1g:
@@ -131,10 +148,7 @@ bool SceneManager::BuildNewScene(SCENE_NUMBER scene) {
 		status = currentScene->OnCreate();
 		break;*/
 
-	case SCENE_NUMBER::SCENEUI:
-		currentScene = new SceneUI();
-		status = currentScene->OnCreate();
-		break;
+	
 
 	default:
 		Debug::Error("Incorrect scene number assigned in the manager", __FILE__, __LINE__);

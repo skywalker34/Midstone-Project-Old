@@ -9,7 +9,7 @@
 bool PlayerController::OnCreate()
 {
 	//here for future improvements
-	transform.setPos(Vec3(0, 0, -10));
+	transform.setPos(Vec3(0, 0, -20));
 	camera.SetView(transform);
 	return true;
 	
@@ -32,7 +32,10 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 			//	below works *marginally* better (still jank af)
 			v = transform.getPos();
+		
+
 			v += (VMath::normalize(-direction) * speed);
+
 			transform.setPos(v);
 			break;
 
@@ -41,7 +44,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 
 			v = transform.getPos();
-			v += (direction * speed);
+			v += (-direction * speed);
 
 			transform.setPos(v);
 			break;
@@ -49,12 +52,17 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 			//future for strafing movement
 		case SDL_SCANCODE_A:
 
+
 			break;
 
 		case SDL_SCANCODE_D:
 
 			break;
 
+		case SDL_SCANCODE_O:
+			//if player hits o reset them to the origin
+			transform = Transform();
+			break;
 
 
 		}
@@ -63,7 +71,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 	case SDL_MOUSEBUTTONDOWN:
 
 	{
-		IHave3DClick = true;
+		has3DClick = true;
 		Vec4 mousePosPixelSpace = Vec4(sdlEvent.button.x, sdlEvent.button.y, 0, 1);
 
 		Vec4 mousePosNDCSpace = MMath::inverse(MMath::viewportNDC(1280, 720)) * mousePosPixelSpace;
@@ -90,7 +98,9 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 		intersection = intersection / intersection.w;
 
 
-		intersection.print("3D click at: ");
+
+		//intersection.print("3D click at: ");
+		clickPos = Vec3(intersection);
 	}
 	break;
 
@@ -108,6 +118,21 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 		
 	}
 
-	camera.SetView(transform);
+	
 
+}
+
+void PlayerController::update(const float deltaTime)
+{
+	camera.SetView(transform);
+}
+
+
+
+
+Vec3 PlayerController::getClickPos()
+{
+	has3DClick = false;
+	return clickPos;
+	
 }
