@@ -9,7 +9,7 @@ class Model
 {
 private:
 	std::string filePath = "meshes/";	//ensure this matches where our meshes are kept
-	const char* fileName = nullptr;
+	std::string fileName ;
 
 public:
 	Texture tex;
