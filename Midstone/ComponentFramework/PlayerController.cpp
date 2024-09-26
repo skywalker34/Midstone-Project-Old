@@ -9,8 +9,8 @@
 bool PlayerController::OnCreate()
 {
 	//here for future improvements
-	transform.setPos(Vec3(0, 0, -20));
-	camera.SetView(transform);
+	transform.setPos(Vec3(0, 0, 20));
+	
 	return true;
 	
 }
@@ -32,10 +32,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 			//	below works *marginally* better (still jank af)
 			v = transform.getPos();
-		
-
-			v += (VMath::normalize(-direction) * speed);
-
+			v += (VMath::normalize(direction) * speed);
 			transform.setPos(v);
 			break;
 
@@ -44,8 +41,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 
 			v = transform.getPos();
-			v += (-direction * speed);
-
+			v += (VMath::normalize(-direction) * speed);
 			transform.setPos(v);
 			break;
 
@@ -72,7 +68,10 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 	{
 		has3DClick = true;
+
+		//below referenced from physics(semester 2) week 14
 		Vec4 mousePosPixelSpace = Vec4(sdlEvent.button.x, sdlEvent.button.y, 0, 1);
+		
 
 		Vec4 mousePosNDCSpace = MMath::inverse(MMath::viewportNDC(1280, 720)) * mousePosPixelSpace;
 		// Let's get the front of the NDC box
@@ -125,6 +124,10 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 void PlayerController::update(const float deltaTime)
 {
 	camera.SetView(transform);
+	transform.getPos().print("Player: POS: ");
+	if (camera.transform.getPos() == transform.getPos()) {
+		printf("Match!");
+	}
 }
 
 

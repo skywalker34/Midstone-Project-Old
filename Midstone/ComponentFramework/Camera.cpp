@@ -10,15 +10,18 @@ void Camera::SetView(const Quaternion& orientation_, const Vec3& position_) {
 
 void Camera::SetView(const Transform t_)
 {
-	DualQuat T = DQMath::translate(t_.getPos());
-	DualQuat R = DQMath::rotate(QMath::conjugate(t_.getOrientation()));
+	transform = t_;
+	DualQuat T = DQMath::translate(-transform.getPos());
+	DualQuat R = DQMath::rotate(QMath::conjugate(transform.getOrientation()));
 	viewDq = R * T;
+
+	transform.getPos().print("Camera: POS: ");
 }
 	
 Camera::Camera() {
-	projection = MMath::perspective(45.0f, (16.0f / 9.0f), 0.5f, 100.0f);
+	projection = MMath::perspective(45.0f, (16.0f / 9.0f), 1.0f, 100.0f);
 	transform.setOrientation( Quaternion(1.0f, Vec3(0.0f, 0.0f, 0.0f)));
-	transform.setPos(Vec3(0.0f, 0.0f, -10.0));
+	transform.setPos(Vec3(0.0f, 0.0f, 0.0));
 }
 
 Camera::~Camera() {
