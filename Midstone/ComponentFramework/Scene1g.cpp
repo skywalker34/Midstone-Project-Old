@@ -95,7 +95,7 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 
 		case SDL_SCANCODE_P:
 			//allows us to pause and unpause time, whoah.
-			simRunning = !simRunning;
+			isGameRunning = !isGameRunning;
 			break;
 		}
 
@@ -121,7 +121,7 @@ void Scene1g::HandleEvents(const SDL_Event& sdlEvent) {
 void Scene1g::Update(const float deltaTime) {
 
 	
-	if (simRunning) {
+	if (isGameRunning) {
 		playerController.Update(deltaTime);
 		
 
