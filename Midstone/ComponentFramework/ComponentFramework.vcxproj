@@ -154,6 +154,7 @@
     <ClInclude Include="Body.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="EnemyShip.h" />
     <ClInclude Include="FriendlyShip.h" />
