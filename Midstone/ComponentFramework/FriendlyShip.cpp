@@ -56,7 +56,7 @@ void FriendlyShip::moveToDestination(Vec3 destination_)
 		moveDirection = QMath::rotate(transform.getPos(), newPosition) - transform.getPos();
 		body->vel = speed * VMath::normalize(moveDirection);
 	}
-	else if (body != nullptr) {
+	else {
 		Vec3 diff =  destination - transform.getPos(); //"draw" a vector between the 2 points
 		moveDirection = VMath::normalize(diff);//"convert" thevector into just a direction (normalize)
 		body->vel = moveDirection * speed; //tell the ship to move along that vector

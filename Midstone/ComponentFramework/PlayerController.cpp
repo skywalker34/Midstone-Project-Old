@@ -34,7 +34,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 			//	below works *marginally* better (still jank af)
 			v = transform.getPos();
-			v += (VMath::normalize(direction) * CAMERASPEED);
+			v += (VMath::normalize(direction) * CAMERA_SPEED);
 			transform.setPos(v);
 			break;
 
@@ -43,7 +43,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 
 			v = transform.getPos();
-			v += (VMath::normalize(-direction) * CAMERASPEED);
+			v += (VMath::normalize(-direction) * CAMERA_SPEED);
 			transform.setPos(v);
 			break;
 
@@ -70,7 +70,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 	{
 		has3DClick = true;
-		clickPos = getPositionFromSDL(sdlEvent.button.x, sdlEvent.button.y);
+		clickPos = get3DClickCoords(sdlEvent.button.x, sdlEvent.button.y);
 	}
 	break;
 
@@ -94,7 +94,7 @@ void PlayerController::Update(const float deltaTime)
 {
 	camera.SetView(transform);
 	clickGrid.transform.setOrientation(transform.getOrientation());
-	clickGrid.transform.setPos(getPositionFromSDL(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
+	clickGrid.transform.setPos(get3DClickCoords(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
 }
 
 void PlayerController::Render(Shader* shader) const
@@ -109,7 +109,7 @@ Vec3 PlayerController::getClickPos()
 	
 }
 
-Vec3 PlayerController::getPositionFromSDL(float sdl_X, float sdl_Y)
+Vec3 PlayerController::get3DClickCoords(float sdl_X, float sdl_Y)
 {
 	//below referenced from physics(semester 2) week 14
 	Vec4 sdlPosPixelSpace = Vec4(sdl_X, sdl_Y, 0, 1);

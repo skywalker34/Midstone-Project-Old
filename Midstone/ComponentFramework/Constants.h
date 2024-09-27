@@ -15,9 +15,6 @@ const Vec3 RIGHT = Vec3(1, 0, 0);
 const Vec3 UP = Vec3(0, 1, 0); 
 const Vec3 DOWN = Vec3(0, -1, 0);
 
-// Speed
-const float CAMERASPEED = 0.5f;
-
 // Screen
 const int SCREEN_WIDTH = 1280;
 const int SCREEN_HEIGHT = 640;
