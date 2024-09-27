@@ -18,7 +18,8 @@ namespace COLLISION {
 	// If a collision has occurred, we need to immediately change the velocity
 	// of both spheres. We will definitely be changing the Body object’s so there are
 	// no “const” keywords here
-	void SphereSphereCollisionResponse(Sphere* body1, Sphere* body2);
+	// Not needed because we just need detection
+	//void SphereSphereCollisionResponse(Sphere* body1, Sphere* body2);
 }
 
 #endif

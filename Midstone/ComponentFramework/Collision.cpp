@@ -19,19 +19,7 @@ bool COLLISION::SphereSphereCollisionDetected(const Sphere* body1, const Sphere*
 	return result;
 }
 
-void COLLISION::SphereSphereCollisionResponse(Sphere* body1, Sphere* body2) {
-	std::cout << "We have impact baby or in this case... I SEE YOU!" << std::endl;
-
-	//Not needed but im gonna keep this here for good measure
-	//// Following Umer's assignment
-	//// Step 1, find the normal vector (vector from body1 to body2)
-	//Vec3 normal; // Remember to normalize this
-	//normal = VMath::normalize(body2->pos - body1->pos);
-	//// Step 2, find the relative velocity
-	//float relVel = VMath::dot((body1->vel - body2->vel), normal);
-	//// Step 3, IMPLUSE BABY
-	//float J = -(1 + 0.99) * relVel / (1 / body1->mass + 1 / body2->mass);
-	//// Step 4, calculate new velocity
-	//body1->vel += J * normal / body1->mass;
-	//body2->vel -= J * normal / body2->mass;
-}
+//Not needed because only detection is needed
+//void COLLISION::SphereSphereCollisionResponse(Sphere* body1, Sphere* body2) {
+//	std::cout << "We have impact baby or in this case... I SEE YOU!" << std::endl;
+//}
