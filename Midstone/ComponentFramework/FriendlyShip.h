@@ -20,9 +20,10 @@ class FriendlyShip :
 		//modelmatrix
 		std::vector<Bullet> bullets;
 		ShipController controller;
-		Vec3 destination = Vec3(0, 0, 5.0f);
+		Vec3 destination = Vec3(0, 0, 0);
 		Vec3 moveDirection;
 		bool isMoving = false;
+		float newAngle = 0;
 
 		Sphere* detectionSphere = nullptr;
 

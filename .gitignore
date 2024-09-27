@@ -5,4 +5,8 @@
 *.vsidx
 
 Debug/
+Midstone/.vs
 Midstone/ComponentFramework/Debug
+Midstone/ComponentFramework/GameEngineLog.txt
+Midstone/.vs/ComponentFramework/v17/Browse.VC.db
+Midstone/.vs/ComponentFramework/v17/.suo

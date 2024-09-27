@@ -14,13 +14,12 @@ union SDL_Event;
 class PlayerController
 {
 	private:
+		const float CAMERA_SPEED = 0.5f;
 		
 		Actor clickGrid;
 		Trackball trackball;
 		Transform transform;
-		Vec3 forward = Vec3(0.0f,0.0f,-1.0f); //tells the program that into the screen is the negative z axis (might be a better way to do this)
 		Vec3 clickPos;
-		float speed = 0.5f; //the rate of speed the player can move the camera
 		float planeDepth = 0;
 
 	public:
@@ -32,7 +31,7 @@ class PlayerController
 		void Update(const float deltaTime);
 		void Render(Shader* shader) const;
 		Vec3 getClickPos();//returns the position of a 3d click
-	
+		Vec3 get3DClickCoords(float sdl_X, float sdl_Y);
 };
 
 
