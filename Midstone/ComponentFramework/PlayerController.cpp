@@ -1,6 +1,6 @@
 #include "PlayerController.h"
+#include "Constants.h"
 #include <SDL.h>
-
 #include <DQMath.h>
 #include <Plane.h>
 
@@ -23,8 +23,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 	trackball.HandleEvents(sdlEvent);
 	transform.setOrientation(trackball.getQuat()); //trackball so viewer can "turn their head"
 
-	Vec3 direction = QMath::rotate(-forward, transform.getOrientation()); //gets the direction the camera is facing
-	//direction.print("Direction: ");
+	Vec3 direction = QMath::rotate(-FORWARD, transform.getOrientation()); //gets the direction the camera is facing
 	Vec3 v;//temporary
 	switch (sdlEvent.type) {
 	case SDL_KEYDOWN: //code that allows the user to move the camera around
@@ -35,7 +34,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 			//	below works *marginally* better (still jank af)
 			v = transform.getPos();
-			v += (VMath::normalize(direction) * speed);
+			v += (VMath::normalize(direction) * CAMERASPEED);
 			transform.setPos(v);
 			break;
 
@@ -44,7 +43,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 
 			v = transform.getPos();
-			v += (VMath::normalize(-direction) * speed);
+			v += (VMath::normalize(-direction) * CAMERASPEED);
 			transform.setPos(v);
 			break;
 
@@ -71,38 +70,7 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 	{
 		has3DClick = true;
-
-		//below referenced from physics(semester 2) week 14
-		Vec4 mousePosPixelSpace = Vec4(sdlEvent.button.x, sdlEvent.button.y, 0, 1);
-		
-
-		Vec4 mousePosNDCSpace = MMath::inverse(MMath::viewportNDC(1280, 720)) * mousePosPixelSpace;
-		// Let's get the front of the NDC box
-		mousePosNDCSpace.z = -1.0f;
-
-		Vec4 mousePosCameraSpace = MMath::inverse(camera.GetProjectionMatrix()) * mousePosNDCSpace;
-		// Divide out the w component
-		mousePosCameraSpace = mousePosCameraSpace / mousePosCameraSpace.w;
-
-		Vec4 mousePosWorldSpace = MMath::inverse(MATHEX::DQMath::toMatrix4(camera.GetViewDQuaternion())) * mousePosCameraSpace;
-
-		// Make a line from the camera position to the mouse
-		// Using the join of two points
-		DualQuat line = transform.getPos() & mousePosWorldSpace;
-
-		// Make a plane based off scrollwheel
-		Plane plane = Plane(0, 0, 1, -(-planeDepth));
-
-		// intersection point is the meet of line and plane
-		Vec4 intersection = line ^ plane;
-
-		// Divide out the w component
-		intersection = intersection / intersection.w;
-
-
-
-		//intersection.print("3D click at: ");
-		clickPos = Vec3(intersection);
+		clickPos = getPositionFromSDL(sdlEvent.button.x, sdlEvent.button.y);
 	}
 	break;
 
@@ -111,11 +79,8 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 
 	case SDL_MOUSEWHEEL:
 		planeDepth += sdlEvent.wheel.preciseY;
-		clickGrid.transform.setPos(Vec3(0.0f, 0.0f, -planeDepth));
 		//plane depth increases if the mouse is wheeled up (by the amount the mouse is wheeled)
 		//plane depth decreases if the mouse is wheeled down (by the amount the mouse is wheeled)
-
-
 		break;
 
 		
@@ -128,7 +93,8 @@ void PlayerController::handleEvents(const SDL_Event& sdlEvent)
 void PlayerController::Update(const float deltaTime)
 {
 	camera.SetView(transform);
-	
+	clickGrid.transform.setOrientation(transform.getOrientation());
+	clickGrid.transform.setPos(getPositionFromSDL(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
 }
 
 void PlayerController::Render(Shader* shader) const
@@ -136,12 +102,42 @@ void PlayerController::Render(Shader* shader) const
 	clickGrid.Render(shader);
 }
 
-
-
-
 Vec3 PlayerController::getClickPos()
 {
 	has3DClick = false;
 	return clickPos;
 	
+}
+
+Vec3 PlayerController::getPositionFromSDL(float sdl_X, float sdl_Y)
+{
+	//below referenced from physics(semester 2) week 14
+	Vec4 sdlPosPixelSpace = Vec4(sdl_X, sdl_Y, 0, 1);
+
+
+	Vec4 sdlPosNDCSpace = MMath::inverse(MMath::viewportNDC(SCREEN_WIDTH, SCREEN_HEIGHT)) * sdlPosPixelSpace;
+	// Let's get the front of the NDC box
+	sdlPosNDCSpace.z = -1.0f;
+
+	Vec4 sdlPosCameraSpace = MMath::inverse(camera.GetProjectionMatrix()) * sdlPosNDCSpace;
+	// Divide out the w component
+	sdlPosCameraSpace = sdlPosCameraSpace / sdlPosCameraSpace.w;
+
+	Vec4 sdlPosWorldSpace = MMath::inverse(MATHEX::DQMath::toMatrix4(camera.GetViewDQuaternion())) * sdlPosCameraSpace;
+
+	// Make a line from the camera position to the mouse
+	// Using the join of two points
+	DualQuat line = transform.getPos() & sdlPosWorldSpace;
+
+	// Make a plane based off scrollwheel
+	Plane plane = Plane(0, 0, 1, -(-planeDepth));
+
+	// intersection point is the meet of line and plane
+	Vec4 intersection = line ^ plane;
+
+	// Divide out the w component
+	intersection = intersection / intersection.w;
+
+
+	return Vec3(intersection);
 }

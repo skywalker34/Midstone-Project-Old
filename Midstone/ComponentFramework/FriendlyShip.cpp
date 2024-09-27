@@ -26,17 +26,17 @@ void FriendlyShip::Update(const float deltaTime)
 		transform = body->Update(deltaTime, transform);
 		//keeps the ship pointing toward where its going
 		Vec3 axis = VMath::cross(Vec3(0, 0, -1), moveDirection); //use the foward vector (negative z and diretion to get the axis of rotation)
-		float angle = acos(VMath::dot(Vec3(0, 0, -1), moveDirection)) * RADIANS_TO_DEGREES;
+		float targetAngle = acos(VMath::dot(Vec3(0, 0, -1), moveDirection)) * RADIANS_TO_DEGREES;
 
+		newAngle = targetAngle > newAngle ? newAngle + 1 : targetAngle;	// Not done yet
 		
-
-		Quaternion q = QMath::angleAxisRotation(angle, axis);
-		transform.setOrientation(q);
-
-		if (VMath::mag(destination - transform.getPos()) < 0.01) {
-			body->vel = Vec3();
-			isMoving = false;
-		}
+		Quaternion newTransform = QMath::angleAxisRotation(newAngle, axis);	// Not done yet
+	
+		transform.setOrientation(newTransform);
+		isMoving = VMath::mag(destination - transform.getPos()) > 0.01;
+	}
+	else {
+		body->vel = Vec3();
 	}
 	
 }
@@ -48,31 +48,19 @@ void FriendlyShip::moveToDestination(Vec3 destination_)
 {
 	destination = destination_;
 	isMoving = true;
+	newAngle = 0;
 	if (wouldIntersectPlanet) {
 		
 		Vec3 axis = VMath::cross(destination, transform.getPos());
 		Quaternion newPosition = QMath::angleAxisRotation(1.0f, axis);
 		moveDirection = QMath::rotate(transform.getPos(), newPosition) - transform.getPos();
 		body->vel = speed * VMath::normalize(moveDirection);
-
-		
-
-		
 	}
-	else {
-		if (body != nullptr) {
-			Vec3 diff =  destination - transform.getPos(); //"draw" a vector between the 2 points
-			moveDirection = VMath::normalize(diff);//"convert" thevector into just a direction (normalize)
-			body->vel = moveDirection * speed; //tell the ship to move along that vector
-			
-			
-			
-		}
-
-
+	else if (body != nullptr) {
+		Vec3 diff =  destination - transform.getPos(); //"draw" a vector between the 2 points
+		moveDirection = VMath::normalize(diff);//"convert" thevector into just a direction (normalize)
+		body->vel = moveDirection * speed; //tell the ship to move along that vector
 	}
-
-	
 }
 
 bool FriendlyShip::hasReachDestination()
