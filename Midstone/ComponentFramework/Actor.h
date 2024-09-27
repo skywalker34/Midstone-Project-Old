@@ -2,7 +2,6 @@
 #include "Model.h"
 #include "Transform.h"
 #include "sphere.h"
-//#include "Sphere.h"
 class Actor
 {
 public:	
@@ -15,7 +14,9 @@ public:
 	Sphere* collisionSphere = nullptr;
 
 	Actor() {}
+	bool OnCreate();
 	Actor(Transform transform_, Model model_);
+	void Render(Shader* shader) const;
 	// Functions:
 	// render
 
