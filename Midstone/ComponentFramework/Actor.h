@@ -11,6 +11,8 @@ public:
 	Transform transform;
 	Model model;
 
+	Actor();
+	
 	Sphere* collisionSphere = nullptr;
 
 	Actor() {}
